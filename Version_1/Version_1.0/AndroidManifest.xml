@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/dev_squad_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/dev_squad_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SmartSpend"
+        tools:targetApi="31">
+
+        <!-- Splash Screen - первая активность при запуске -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Окно приветствия -->
+        <activity
+            android:name=".GreetingActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- Окно ввода цели -->
+        <activity
+            android:name=".PurposeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- Окно ввода суммы -->
+        <activity
+            android:name=".SumActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- Окно выбора срока -->
+        <activity
+            android:name=".TermActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- Окно загрузки -->
+        <activity
+            android:name=".LoadingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
+        <!-- Главное окно приложения -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity android:name=".HistoryActivity" />
+    </application>
+
+</manifest>
