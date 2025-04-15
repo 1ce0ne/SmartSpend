@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#312D43">
+
+    <!-- Текст "Привет!" -->
+    <TextView
+        android:id="@+id/helloText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="25dp"
+        android:text="Привет, Nickname"
+        android:textColor="#FFFFFF"
+        android:textSize="27sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!-- Иконка профиля -->
+    <ImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/circle_profile"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user_profile_image_meme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/balanceView"
+        android:layout_width="0dp"
+        android:layout_height="210dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circleImageView"
+        app:srcCompat="@drawable/back_sum" />
+
+    <!-- Текст "Мой баланс" -->
+    <TextView
+        android:id="@+id/balanceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:text="Мой баланс"
+        android:textColor="#DDDDDD"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/balanceView"
+        app:layout_constraintTop_toTopOf="@id/balanceView" />
+
+    <!-- Текст "₽0,0" (баланс) -->
+    <TextView
+        android:id="@+id/balanceAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₽0,0"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/balanceTitle"
+        app:layout_constraintStart_toStartOf="@id/balanceTitle"
+        android:layout_marginTop="0dp"/>
+
+    <!-- Текст "Траты" -->
+    <TextView
+        android:id="@+id/expensesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="30dp"
+        android:text="Траты"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/balanceView"
+        app:layout_constraintStart_toStartOf="@+id/balanceView"
+        app:layout_constraintTop_toBottomOf="@+id/balanceAmount" />
+
+    <!-- Текст "₽0,0" (траты) -->
+    <TextView
+        android:id="@+id/expensesAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="₽0,0"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/balanceView"
+        app:layout_constraintTop_toBottomOf="@id/expensesTitle" />
+
+    <!-- Текст "Доходы" -->
+    <TextView
+        android:id="@+id/incomeTitle"
+        android:layout_width="57dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="30dp"
+        android:text="Доходы"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/balanceView"
+        app:layout_constraintEnd_toEndOf="@+id/balanceView"
+        app:layout_constraintStart_toEndOf="@+id/expensesTitle"
+        app:layout_constraintTop_toBottomOf="@+id/balanceAmount" />
+
+    <!-- Текст "₽0,0" (доходы) -->
+    <TextView
+        android:id="@+id/incomeAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="₽0,0"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/incomeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/incomeTitle" />
+
+    <!-- Текст "Привет!" -->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="197dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:rotation="180"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balanceView"
+        app:srcCompat="@drawable/back_sum" />
+
+    <TextView
+        android:id="@+id/purposeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Цели"
+        android:textColor="#FFFFFF"
+        android:textSize="27sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/purposeText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:text="Все"
+        android:textColor="#BABABA"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/balanceView"
+        app:srcCompat="@drawable/add_button" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="65dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/balanceView"
+        app:srcCompat="@drawable/minus_button" />
+
+    <!-- Текст "Мой баланс" -->
+    <TextView
+        android:id="@+id/historyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="История транзакций"
+        android:textColor="#DDDDDD"
+        android:textSize="18sp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"/>
+
+    <!-- Добавленный LinearLayout вместо ScrollView -->
+    <LinearLayout
+        android:id="@+id/allCeli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/purposeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="0dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
